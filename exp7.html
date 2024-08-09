@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+
+        
+        <div class="tracker-item">
+            <h2>Steps</h2>
+            <p>Today's Steps: <span id="steps-count">0</span> / 10000</p>
+            <input type="range" id="steps-range" min="0" max="10000" value="0">
+        </div>
+        <div class="tracker-item">
+            <h2>Calories Burned</h2>
+            <p>Calories Burned: <span id="calories-count">0</span> / 2000</p>
+            <input type="range" id="calories-range" min="0" max="2000" value="0">
+        </div>
+
+        
+        <div class="tracker-item">
+            <h2>Water Intake</h2>
+            <p>Water Intake: <span id="water-count">0</span> / 8 glasses</p>
+            <input type="range" id="water-range" min="0" max="8" value="0">
+        </div>
+
+    </div>
+
+    
+    <script>
+        
+        document.getElementById('steps-range').addEventListener('input', function() {
+            document.getElementById('steps-count').innerText = this.value;
+        });
+
+    
+        document.getElementById('calories-range').addEventListener('input', function() {
+            document.getElementById('calories-count').innerText = this.value;
+        });
+
+    
+        document.getElementById('water-range').addEventListener('input', function() {
+            document.getElementById('water-count').innerText = this.value;
+        });
+    </script>
+</body>
+</html>
